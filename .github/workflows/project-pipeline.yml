@@ -13,17 +13,16 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python 3.11
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: 3.11
 
       - name: Install dependencies
         run: |
-          pip install sqlalchemy pandas numpy lxml
-          # pip3 install lxml
+          pip3 install sqlalchemy pandas numpy lxml
 
       - name: Run pipeline.py
         run: python project/pipeline.py
