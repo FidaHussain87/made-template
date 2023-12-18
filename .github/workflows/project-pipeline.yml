@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - "project/**"
-      - "data/**"
     branches:
       - main
 
@@ -25,7 +24,7 @@ jobs:
         run: |
           pip install sqlalchemy pandas numpy
 
-      - name: Run test.sh
+      - name: Run tests.sh
         run: |
           chmod +x ./project/tests.sh
           ./project/tests.sh
