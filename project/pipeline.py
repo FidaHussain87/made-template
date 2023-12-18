@@ -22,7 +22,7 @@ def transform_data(df, column_map, col_to_drop):
 def load_data(df, table):
     """Load data into a SQLite database."""
     try:
-        engine = create_engine("sqlite:///../data/unemployed.sqlite")
+        engine = create_engine("sqlite:///./data/unemployed.sqlite")
         df.to_sql(table, engine, if_exists="replace")
     except Exception as e:
         raise Exception(f"Data loading failed: {e}")
