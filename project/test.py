@@ -45,7 +45,7 @@ def perform_data_loading_test(df, table_name):
     total_tests += 1
     try:
         load_data(df, table_name)
-        engine = create_engine("sqlite:///../data/unemployed.sqlite")
+        engine = create_engine("sqlite:///./data/unemployed.sqlite")
         inspector = inspect(engine)
         if not inspector.has_table(table_name):
             failed_tests += 1
