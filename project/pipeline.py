@@ -2,7 +2,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 def extract_data(url):
-    """Extract data from a given URL."""
+    """Extract data from a given URL.."""
     try:
         df = pd.read_html(url)[0][:-1]
         return df
