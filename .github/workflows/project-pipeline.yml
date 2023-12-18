@@ -24,7 +24,8 @@ jobs:
         run: |
           pip install sqlalchemy pandas numpy lxml
 
-      - name: Run tests.sh
-        run: |
-          chmod +x ./project/tests.sh
-          ./project/tests.sh
+      - name: Run pipeline.py
+        run: python project/pipeline.py
+
+      - name: Run test.py
+        run: python project/test.py
