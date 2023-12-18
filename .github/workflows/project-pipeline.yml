@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install sqlalchemy pandas numpy
+          pip install sqlalchemy pandas numpy lxml
 
       - name: Run tests.sh
         run: |
