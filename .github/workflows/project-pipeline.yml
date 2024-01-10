@@ -21,8 +21,7 @@ jobs:
           python-version: 3.11
 
       - name: Install dependencies
-        run: |
-          pip3 install sqlalchemy pandas numpy lxml
+        run:  pip3 install -r project/requirements.txt
 
       - name: Run pipeline.py
         run: python project/pipeline.py
