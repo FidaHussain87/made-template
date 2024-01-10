@@ -15,9 +15,29 @@ def transform_data(df, column_map, col_to_drop):
         df = df.copy()
         df.rename(columns=column_map, inplace=True)
         df.drop(columns=col_to_drop, inplace=True)
+       
+       # Convert 'male' and 'female' to numeric
+        df['male'] = pd.to_numeric(df['male'], errors='coerce')
+        df['female'] = pd.to_numeric(df['female'], errors='coerce')
+
+        # Convert 'month' to a number only if it's not already numeric
+        if df['month'].dtype == 'object':
+            df['month'] = df['month'].apply(month_to_number)
+
+        # Extract year from 'year' column (if it's a datetime type)
+        if pd.api.types.is_datetime64_any_dtype(df['year']):
+            df['year'] = df['year'].dt.year
+       
         return df
     except Exception as e:
         raise Exception(f"Data transformation failed: {e}")
+
+# Function to convert month name to number
+def month_to_number(month_name):
+    month_dict = {'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'Jun': 6, 
+                  'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12}
+    return month_dict[month_name]
+
 
 def load_data(df, table):
     """Load data into a SQLite database."""
@@ -26,6 +46,7 @@ def load_data(df, table):
         df.to_sql(table, engine, if_exists="replace")
     except Exception as e:
         raise Exception(f"Data loading failed: {e}")
+
 
 def main():
     # Common Column Map and Columns to Drop
