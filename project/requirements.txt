@@ -1,0 +1,4 @@
+sqlalchem
+pandas
+numpy
+lxml
