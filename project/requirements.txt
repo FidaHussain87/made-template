@@ -1,4 +1,4 @@
-sqlalchem
+sqlalchemy
 pandas
 numpy
 lxml
