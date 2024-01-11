@@ -6,7 +6,27 @@ Before you begin, make sure you have [Python](https://www.python.org/) and [Jayv
 
 
 ## Project Work
-Your data engineering project will run alongside lectures during the semester. We will ask you to regularly submit project work as milestones so you can reasonably pace your work. All project work submissions **must** be placed in the `project` folder.
+Knowing unemployment trends in a socioeconomic setting is crucial for making wise policy choices. The main goal of this study is to provide a thorough examination of East and West German unemployment statistics. Finding patterns, contrasting regional differences, and drawing conclusions that further a sophisticated knowledge of the dynamics of unemployment in the two areas are the main goals. This study has investigated the following important areas:
+
+1. **Comparative Analysis of Unemployment Trends (2018-2023)**:
+   - Investigating the historical trends of unemployment in East and West Germany.
+   - Identifying key factors contributing to variations in unemployment rates between the two regions.
+
+2. **Monthly and Seasonal Variations in Unemployment Rates**:
+   - Analyzing how unemployment rates fluctuate on a monthly and seasonal basis.
+   - Exploring the impact of specific months or seasons on regional unemployment patterns.
+
+3. **Demographic Correlations**:
+   - Investigating correlations between unemployment rates and demographic factors.
+   - Analyzing gender-specific unemployment trends and disparities in both regions.
+
+4. **Predictive Analysis and Future Trends**:
+   - Employing predictive modeling to forecast potential future unemployment trends.
+   - Providing insights into factors that may influence future employment dynamics.
+
+Policymakers, researchers, and anybody else seeking to learn more about the economic conditions in East and West Germany might find this project report to be an extensive resource. The detailed findings presents the specific conclusions and suggestions, providing insightful viewpoints on the dynamics of regional unemployment.
+
+I cordially encourage you to explore the in-depth analysis provided in this project [[Report]](project/report.ipynb). The purpose of the study is to support well-informed decision-making and strategies for resolving issues related to unemployment in various German regions.
 
 ### Exporting a Jupyter Notebook
 Jupyter Notebooks can be exported using `nbconvert` (`pip install nbconvert`). For example, to export the example notebook to html: `jupyter nbconvert --to html examples/final-report-example.ipynb --embed-images --output final-report.html`
